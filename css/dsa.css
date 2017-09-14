@@ -297,7 +297,7 @@
 
   /** BLOG **/
   .blog h3{
-    color:#e57200;
+    color:#333;
   }
   .logistics{
     color:#666;
@@ -310,11 +310,22 @@
     margin-bottom:24px;
     padding-bottom:8px
   }
-  .blogSumm a{
-    color:#e57200;
-  }.blogSumm a:hover{
+  .blogSumm a:hover{
     color:#333;
   }
+  .blogSumm:last-of-type{
+    border-bottom:none;
+  }
+  .depts ul{
+    margin:0;
+    padding:0;
+  }
+  .depts li{
+    list-style-type:none;
+    margin:0 0 16px 0;
+    line-height: 1.2em;
+  }
+
 
 
 /** FOOTER FORM **/
