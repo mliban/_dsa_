@@ -1,3 +1,42 @@
+/* ADDITIONS 9/19/17 */
+  h1#mainTitle{
+    font-size: 150%;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+  a.skip-links-item {
+    font-size: 14px;
+    text-decoration: underline;
+    position: absolute;
+    left: 15px;
+    top: -100px;
+    z-index: 10000;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #ffba00;
+    outline: none;
+    transition: top .2s,background-color .2s;
+  }
+
+  a.skip-links-item:active,
+  a.skip-links-item:focus {
+    top: 0;
+    background-color: #272727;
+  }
+
+  #skip-links {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-left: 0;
+    list-style: outside none;
+  }
+
+
 /** GENERAL **/
   body{
     background:#efefef;
@@ -15,8 +54,8 @@
     background:#ffb800;
   }
   .darkBg{
-    background:#666;
-    color:#ccc;
+    background:#333;
+    color:#fff;
   }
   .stacks{
     position:absolute;
@@ -71,6 +110,12 @@
   .card-inverse .card-text{
     color:#fff;
   }
+  .secondLevelHeader h4 {
+    color: #fff;
+  }
+  h5.card-title {
+    color: #fff;
+  }
 
 
 /** CAROUSEL **/
@@ -113,7 +158,8 @@
     font-family: "lora", Georgia, serif;
     font-weight: bold;
   }
-  nav ul.randy a{
+  nav ul.randy a,
+  nav ul.randy li li a{
     color:#333;
   }
 
@@ -166,8 +212,8 @@
 
   nav ul.randy ul{
     font-size:80%;
-    background:green;
-    z-index:9999999;
+    background:#fff;
+    z-index: 9999;
     padding:16px 16px 16px 0;
     margin:0;
     font-family: 'karla', sans-serif;
@@ -176,9 +222,6 @@
   nav ul.randy ul li{
     margin:0;
     padding:0;
-  }
-  nav ul.randy li li a{
-    color:#333;
   }
 
   nav ul.randy ul ul {
@@ -242,10 +285,10 @@
   .sidenav .closebtn {
     position: absolute;
     top:0;
-    color:#666;
     right: 15px;
     font-size: 36px;
     margin-left: 50px;
+    color:#666;
   }
 
   #main{
@@ -269,6 +312,10 @@
   .firstRowCard{
     height:348px;
   }
+  .firstRowCard h5,
+  .firstRowCard p {
+    padding: 16px 16px 0 16px;
+  }
 
 
 /** SECOND LEVEL PAGE **/
@@ -287,7 +334,7 @@
     line-height: 1.5em;
   }
   .card-img-overlay.secondLevelHeader,
-  .card-img-overlay.blogHeader {
+  .card-img-overlay.blogHeader{
     background: rgba(0,0,0,0.3);
   }
   .card-img{
@@ -295,8 +342,10 @@
   }
 
 
-  /** BLOG **/
-  .blog h3{
+/** BLOG **/
+  .blog h3,
+  .blogSumm a:hover,
+  .firstRowCard h5{
     color:#333;
   }
   .logistics{
@@ -310,9 +359,6 @@
     margin-bottom:24px;
     padding-bottom:8px
   }
-  .blogSumm a:hover{
-    color:#333;
-  }
   .blogSumm:last-of-type{
     border-bottom:none;
   }
@@ -325,7 +371,6 @@
     margin:0 0 16px 0;
     line-height: 1.2em;
   }
-
 
 
 /** FOOTER FORM **/
@@ -346,10 +391,16 @@
   }
 
 
+/** FOOTER FORM **/
+	footer a{
+	  color:#ffb800;
+    font-weight: bold;
+	}
+
+
 /** OTHER **/
   .topContainerSpacer{
-    padding-top:24px;
-    padding-bottom:24px;
+    padding:16px;
   }
   /** square corners for all card elements **/
   * {
@@ -375,6 +426,28 @@
       font-size:250%;
       text-align:center;
     }
+    #main {
+      display:inherit;
+      position:fixed;
+      bottom:30px;
+      left:30px;
+      z-index:99999999;
+      background:#ffb800;
+      padding:0 4px;
+    }
+	nav{
+      display:none;
+    }
+    .navvit h6{
+      float:none;
+      margin:0 auto;
+      margin-bottom:24px;
+      font-size:350%;
+      text-align:center;
+    }
+    .sidenav li{
+      list-style-type:none;
+    }
   }
 
   @media (max-width: 425px) {
@@ -387,28 +460,6 @@
     .secondLevelHeader p{
       font-size:90%;
       line-height: 1.2em
-    }
-    #main {
-      display:inherit;
-      position:fixed;
-      bottom:30px;
-      left:30px;
-      z-index:1;
-      background:#ffb800;
-      padding:0 4px;
-    }
-    nav{
-      display:none;
-    }
-    .navvit h6{
-      float:none;
-      margin:0 auto;
-      margin-bottom:24px;
-      font-size:350%;
-      text-align:center;
-    }
-    .sidenav li{
-      list-style-type:none;
     }
   }
 
